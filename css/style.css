@@ -1,0 +1,323 @@
+/*Обнуление минимальное*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+/*-------------------------------------------------------*/
+/*---------Подключение-Шрифты----------------------------*/
+/*-------------------------------------------------------*/
+
+
+
+
+/*-------------------------------------------------------*/
+/*---------Фон, основной блок----------------------------*/
+/*-------------------------------------------------------*/
+
+
+body {
+    height: 100%;
+    background-image: url(../img/fon.png);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+._container {
+    max-width: 1180px;
+    /*Ширина контента*/
+    padding: 0px 20px;
+    margin: 0px auto;
+    box-sizing: content-box;
+
+}
+
+.container__conten {
+    padding: 160px 20px 20px 20px;
+
+}
+
+/*-------------------------------------------------------*/
+/*    Стили для лого первой страницы    */
+/*---------Шапка-----------------------------------------*/
+
+.header {
+    /*position: fixed Фиксируем шапку сайта при прокрутке страницы*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+.header:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    background-color: #fe080800;
+    z-index: 2;
+}
+
+.header__container {
+    position: relative;
+    display: flex;
+    min-height: 200px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.log {
+    width: 800px;
+    position: relative;
+    z-index: 3;
+}
+
+
+
+
+/*-------------------------------------------------------*/
+/*----------Контент main---------------------------------*/
+/*--------контент главной страницы indeh.html------------*/
+.content {
+    z-index: 2;
+    max-width: 100%;
+    /*Ширина контента*/
+    margin: 0px auto;
+    box-sizing: content-box;
+}
+
+.content__image {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.content__image img {
+    max-width: 800px;
+}
+
+.vkshare {
+    text-align: center;
+}
+
+
+
+.menu_item {
+    margin-top: 3%;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+
+
+}
+
+.menu__link {
+    color: #272727;
+    text-decoration: none;
+    transition: color .1s linear;
+}
+
+
+.menu__link:hover {
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+.menu__link:hover:after {
+    opacity: 1;
+}
+
+.header__burger {
+    display: none;
+}
+
+
+.play {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.imgg {
+    margin-top: 20px;
+}
+
+.imgg img {
+    max-width: 300px;
+}
+
+
+
+/*-------------------------------------------------------*/
+/*-------Подвал footer-----------------------------------*/
+/*-------------------------------------------------------*/
+.footer {
+    max-width: 1180px;
+    margin: 10px auto;
+    padding: 20px 10px 10px 10px;
+    margin-top: auto;
+    z-index: 4;
+}
+
+
+
+.footer__body__img1 {
+    width: 50px;
+    height: 40px;
+}
+
+.footer__body__img2 {
+    width: 70px;
+    height: 60px;
+
+}
+
+.text__footer {
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #2e2e2e;
+    text-align: center
+}
+
+.footer__body__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.container__tex {
+    text-align: center
+}
+
+
+.footer__logo {
+    padding: 0px 0px 0px 0px;
+    text-align: center
+}
+
+.footer__logo img {
+    width: 130px;
+}
+
+
+.footer__padding {
+    padding: 0px 20px 0px 20px;
+}
+
+
+
+/*-------------------------------------------------------*/
+/*----------Адаптив под устройства-----------------------*/
+/*----------Планшеты-------------------------------------*/
+@media (max-width: 992px) {
+    .header__container {
+        min-height: 100px;
+    }
+
+    .log {
+        width: 200px;
+    }
+
+
+
+}
+
+/*-------------------------------------------------------*/
+/*----------Адаптив под устройства-----------------------*/
+/*----------Смартфоны------------------------------------*/
+@media (max-width: 767px) {
+    .log {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+
+
+    /*-------------------------------------------------------*/
+    /*----------Главная-------------------*/
+    /*-------------------------------------------------------*/
+    .content {
+
+        max-width: 100%;
+        /*Ширина контента*/
+        margin: 0px auto;
+
+    }
+
+    .content__image {
+
+        text-align: center;
+    }
+
+    .content__image img {
+        max-width: 100%;
+    }
+
+
+
+    .imgg {
+        margin-top: 20px;
+    }
+
+    .imgg img {
+        max-width: 200px;
+    }
+
+
+
+
+    /*-------------------------------------------------------*/
+    /*-------Подвал footer-----------------------------------*/
+    /*-------------------------------------------------------*/
+
+
+    .footer__logo {
+        padding: 0px 0px 5px 0px;
+        text-align: center
+    }
+
+    .footer__logo img {
+        width: 110px;
+    }
+
+
+
+
+}
